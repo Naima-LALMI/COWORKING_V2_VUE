@@ -1,16 +1,31 @@
 <template>
-    <h1>Coworking à Paris </h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+   
+        <h1>Coworking à Paris </h1>
+        <div class="barre">
+        <!-- <label for="name">Recherche un lieu</label> -->
+        <input type="text"  id="searchInput" placeholder="Recherche ton lieu" />
+        <i class="fas fa-search"></i>
+      </div>
+  
+
+   
 </template>
 
 <script setup>
 </script>
 
 <style scoped>
+
+
 h1{
-    margin: 0;
-    line-height: 1.5;
-    font-family: 'Playwrite CU', sans-serif;
-    background-color: #e6e6e6;
+   background-color: whitesmoke;
+    text-align:center;
+    font-size: 3em;
+    color :black
+}
+
+.barre{
+    background-color: whitesmoke;
+    text-align: center;
 }
 </style>

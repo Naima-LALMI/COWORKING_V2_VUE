@@ -1,10 +1,17 @@
 @import './base.css';
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100&display=swap');
 
 #app {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   font-weight: normal;
+}
+body{
+  margin: 0;
+  line-height: 1.5;
+  font-family: 'Playwrite CU', sans-serif;
+  background-color: #e6e6e6;
 }
 
 a,
