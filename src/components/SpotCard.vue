@@ -14,6 +14,8 @@
 </template>
 
 <script setup>
+
+
 defineProps([
   "nameSpot",
   "adressSpot",
