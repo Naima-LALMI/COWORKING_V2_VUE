@@ -1,29 +1,57 @@
 <template>
   <div class="card">
-    <h3>{{ nameSpot }}</h3>
-    <p>{{ adressSpot }}</p>
-    <p>{{ cpSpot }}</p>
-    <p>{{ villeSpot }}</p>
+    <div class="styleElement">
+      <h3>{{ nameSpot }}</h3>
+      <p>{{ adressSpot }}</p>
+      <p>{{ cpSpot }}</p>
+      <p>{{ villeSpot }}</p>
+    </div>
+
+    <a class="lienSpot" v-bind:href="url">Visite le lieu</a>
 
     <img class="picture" :src="'/public/image/' + picture" />
   </div>
 </template>
 
 <script setup>
-defineProps(["nameSpot", "adressSpot", "cpSpot", "villeSpot", "picture"]);
+defineProps([
+  "nameSpot",
+  "adressSpot",
+  "cpSpot",
+  "villeSpot",
+  "picture",
+  "url",
+]);
 </script>
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100&display=swap");
 
 .card {
+  margin-top: 2em;
   font-family: "Playwrite CU", sans-serif;
   color: black;
   text-align: center;
   border: solid;
   border-radius: 5%;
 }
+
+.styleElement {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.lienSpot {
+  background-color:whitesmoke;
+  margin-top: 10em;
+  border: solid;
+  border-radius: 30px;
+  color: black;
+}
 .picture {
+  
   width: 50%;
+  height: auto;
+  margin: 3em;
 }
 </style>
