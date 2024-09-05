@@ -27,6 +27,10 @@ defineProps([
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100&display=swap");
 
+
+template{
+  display: grid;
+}
 .card {
   margin-top: 2em;
   font-family: "Playwrite CU", sans-serif;

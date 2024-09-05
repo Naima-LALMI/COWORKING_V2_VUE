@@ -1,5 +1,6 @@
 <template>
   <Header />
+
   <SpotCard
     v-for="spot in spots"
     :key="spot.id"
@@ -30,7 +31,7 @@ afficherCoworking();
 
 async function afficherImage() {
   const reponse = await fetch(
-    "https://api.unsplash.com/photos/random?client_id=B8h7TfapDvNH46X6wt-u9eICKGeKoG-xL-ld6p7xmjA&query=coworking"
+    "https://api.unsplash.com/photos/random?client_id=B8h7TfapDvNH46X6wt-u9eICKGeKoG-xL-ld6p7xmjA&query=travail"
   );
   const imageCoworkings = await reponse.json();
   img.value = imageCoworkings;

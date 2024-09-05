@@ -21,6 +21,7 @@ border-radius: 1em;
 
 }
 h1 {
+  margin-top: 1em;
   font-size: 3em;
   color: black;
 }
