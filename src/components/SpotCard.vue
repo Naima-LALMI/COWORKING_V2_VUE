@@ -1,3 +1,14 @@
+<script setup>
+defineProps([
+  "nameSpot",
+  "adressSpot",
+  "cpSpot",
+  "villeSpot",
+  "picture",
+  "url",
+]);
+</script>
+
 <template>
   <div class="card">
     <div class="styleElement">
@@ -9,22 +20,9 @@
 
     <a class="lienSpot" v-bind:href="url">Visite le lieu</a>
 
-    <img class="picture" :src="'/public/image/' + picture" />
+    <img class="picture" :src=" picture" />
   </div>
 </template>
-
-<script setup>
-
-
-defineProps([
-  "nameSpot",
-  "adressSpot",
-  "cpSpot",
-  "villeSpot",
-  "picture",
-  "url",
-]);
-</script>
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100&display=swap");
