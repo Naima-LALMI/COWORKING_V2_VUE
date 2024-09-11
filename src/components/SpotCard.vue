@@ -1,3 +1,5 @@
+<!--SPOTCARD.VUE EST LE COMPOSANT ENFANT -->
+
 <script setup>
 defineProps([
   "nameSpot",
