@@ -18,7 +18,7 @@ defineProps([
       <p>{{ villeSpot }}</p>
     </div>
 
-    <a class="lienSpot" v-bind:href="url">Visite le lieu</a>
+    <a class="lienSpot" :href="'//' + url"  target="_blank">Visite le lieu</a>
 
     <img class="picture" :src=" picture" />
   </div>
@@ -26,7 +26,6 @@ defineProps([
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100&display=swap");
-
 
 template{
   display: grid;

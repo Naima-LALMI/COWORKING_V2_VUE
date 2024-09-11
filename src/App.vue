@@ -11,9 +11,11 @@
     :picture="img.urls.raw"
     :url="spot.web"
   />
+  <Map :spots="spots" />
 </template>
 
 <script setup>
+import Map from './components/Map.vue';
 import { ref } from "vue";
 import Header from "@/components/Header.vue";
 import SpotCard from "./components/SpotCard.vue";
@@ -31,11 +33,10 @@ afficherCoworking();
 
 async function afficherImage() {
   const reponse = await fetch(
-    "https://api.unsplash.com/photos/random?client_id=B8h7TfapDvNH46X6wt-u9eICKGeKoG-xL-ld6p7xmjA&query=travail"
+    "https://api.unsplash.com/photos/random?client_id=B8h7TfapDvNH46X6wt-u9eICKGeKoG-xL-ld6p7xmjA&query=desk"
   );
   const imageCoworkings = await reponse.json();
   img.value = imageCoworkings;
-  console.log(img.value);
 }
 afficherImage();
 </script>
