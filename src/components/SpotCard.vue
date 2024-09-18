@@ -9,6 +9,9 @@ defineProps([
   "picture",
   "url",
 ]);
+
+
+
 </script>
 
 <template>
@@ -20,16 +23,16 @@ defineProps([
       <p>{{ villeSpot }}</p>
     </div>
 
-    <a class="lienSpot" :href="'//' + url"  target="_blank">Visite le lieu</a>
+    <a class="lienSpot" :href="'//' + url" target="_blank">Visite le lieu</a>
 
-    <img class="picture" :src=" picture" />
+    <img class="picture" :src="picture" />
   </div>
 </template>
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100&display=swap");
 
-template{
+template {
   display: grid;
 }
 .card {
@@ -47,14 +50,13 @@ template{
 }
 
 .lienSpot {
-  background-color:whitesmoke;
+  background-color: whitesmoke;
   margin-top: 10em;
   border: solid;
   border-radius: 30px;
   color: black;
 }
 .picture {
-  
   width: 50%;
   height: auto;
   margin: 3em;
