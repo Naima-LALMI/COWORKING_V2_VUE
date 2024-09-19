@@ -37,13 +37,13 @@ async function afficherCoworking() {
   );
   const coworkings = await reponse.json();
 
-  // for (let i = 0; i < coworkings.results.length; i++) {
-  //   const response1 = await fetch(
-  //     "https://api.unsplash.com/photos/random?client_id=B8h7TfapDvNH46X6wt-u9eICKGeKoG-xL-ld6p7xmjA&query=desk"
-  //   );
-  //   const imageCoworkings = await response1.json();
-  //   coworkings.results[i].img = imageCoworkings.urls.raw;
-  // }
+  for (let i = 0; i < coworkings.results.length; i++) {
+    const response1 = await fetch(
+      "https://api.unsplash.com/photos/random?client_id=B8h7TfapDvNH46X6wt-u9eICKGeKoG-xL-ld6p7xmjA&query=desk"
+    );
+    const imageCoworkings = await response1.json();
+    coworkings.results[i].img = imageCoworkings.urls.raw;
+  }
 
   spots.value = coworkings.results;
   console.log(spots.value)
