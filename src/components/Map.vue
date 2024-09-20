@@ -6,7 +6,11 @@
         layer-type="base"
         name="OpenStreetMap"
       ></l-tile-layer>
-      <l-marker :lat-lng="coordinates"> </l-marker>
+      <l-marker
+        v-for="coordinates in allspotsCoordinates"
+        :lat-lng="coordinates"
+      >
+      </l-marker>
     </l-map>
   </div>
 </template>
@@ -16,6 +20,10 @@ import "leaflet/dist/leaflet.css";
 import { LMap, LTileLayer, LMarker } from "@vue-leaflet/vue-leaflet";
 
 export default {
+  // Déclaration des props
+  props: ["allspotsCoordinates"],
+
+  // Définition des composants Vue Leaflet
   components: {
     LMap,
     LTileLayer,
@@ -24,7 +32,6 @@ export default {
   data() {
     return {
       zoom: 2,
-      coordinates: [48.8414302, 2.2961649],
     };
   },
 };

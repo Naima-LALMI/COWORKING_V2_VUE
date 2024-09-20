@@ -17,7 +17,14 @@
     </div>
 
     <!-- Passer le tableau des spots à la carte -->
-    <div class="mapDiv"><Map :spots="spots" /></div>
+    <div class="mapDiv">
+      <Map
+        :allspotsCoordinates="
+          // map renvoi un [] qui contiendra des tableaux avec les données de longitudes et latitudes
+          spots.map((spot) => [spot.coordonnees.lat, spot.coordonnees.lon])
+        "
+      />
+    </div>
   </div>
 </template>
 
@@ -26,7 +33,6 @@ import { ref } from "vue";
 import Map from "./components/Map.vue";
 import Header from "@/components/Header.vue";
 import SpotCard from "./components/SpotCard.vue";
-
 
 const spots = ref([]);
 const img = ref([]);
@@ -46,11 +52,9 @@ async function afficherCoworking() {
   }
 
   spots.value = coworkings.results;
-  console.log(spots.value)
-
+  // map.value = coworkings.results.coordonnees
 }
 afficherCoworking();
-
 </script>
 
 <style scoped>
