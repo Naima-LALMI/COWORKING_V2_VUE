@@ -7,9 +7,13 @@
         name="OpenStreetMap"
       ></l-tile-layer>
       <l-marker
-        v-for="coordinates in allspotsCoordinates"
-        :lat-lng="coordinates"
+        v-for="spot in allspots"
+        :key="spot.name"
+        :lat-lng="spot.coordinates"
       >
+        <l-popup>
+          <h1>{{ spot.name }}</h1>
+        </l-popup>
       </l-marker>
     </l-map>
   </div>
@@ -17,21 +21,19 @@
 
 <script>
 import "leaflet/dist/leaflet.css";
-import { LMap, LTileLayer, LMarker } from "@vue-leaflet/vue-leaflet";
+import { LMap, LTileLayer, LMarker, LPopup } from "@vue-leaflet/vue-leaflet";
 
 export default {
-  // Déclaration des props
-  props: ["allspotsCoordinates"],
-
-  // Définition des composants Vue Leaflet
+  props: ["allspots"],
   components: {
     LMap,
     LTileLayer,
     LMarker,
+    LPopup,
   },
   data() {
     return {
-      zoom: 2,
+      zoom: 5,
     };
   },
 };
