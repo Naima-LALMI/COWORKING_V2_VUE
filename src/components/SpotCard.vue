@@ -34,12 +34,13 @@ template {
   display: grid;
 }
 .card {
+  line-height : 2.5em ;
   margin-top: 2em;
   font-family: "Playwrite CU", sans-serif;
   color: black;
   text-align: center;
   border: solid;
-  border-radius: 5%;
+  border-radius: 8%;
 }
 
 .styleElement {
